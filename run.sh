@@ -69,7 +69,7 @@ process_completions() {
   begin_line=""
   end_line=$'\n'
   if [[ "$shell" == "zsh" ]]; then
-    begin_line="\t\t"
+    begin_line="    "
     end_line=" \\\\"$'\n'
   fi
   while IFS= read -r line; do
