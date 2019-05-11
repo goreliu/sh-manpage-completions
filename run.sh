@@ -11,6 +11,8 @@ usage() {
   exit
 }
 
+cd "$(dirname $0)" || exit 1
+
 file=$1
 [ -f "$1" ] || usage
 
@@ -121,5 +123,5 @@ process_completions() {
   echo "Completion file available at $shell_file."
 }
 
-process_completions bash
+# process_completions bash
 process_completions zsh
